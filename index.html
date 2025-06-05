@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blitz Kaszinó ajánlatokat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #f8fafc;
+        }
+        
+        .casino-card {
+            transition: all 0.3s ease;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .casino-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4);
+        }
+        
+        .casino-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #7bf163, #51f142, #1fe42f);
+        }
+        
+        .casino-logo {
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+            transition: all 0.3s ease;
+        }
+        
+        .casino-card:hover .casino-logo {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+        }
+        
+        .deal-badge {
+            background: linear-gradient(45deg, #12df8a, #07b80f);
+            clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, #37d432, #21df96);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(45, 235, 7, 0.4);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(36, 240, 36, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(24, 156, 7, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(60, 238, 60, 0);
+            }
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 8px 12px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0fb332, #4ce426);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="py-8 px-4 md:px-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-6 md:mb-0">
+                <div class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center mr-4">
+                    <i class="fas fa-dice text-white text-xl"></i>
+                </div>
+                <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-indigo-400 to-green-600 bg-clip-text text-transparent">
+                    Blitz
+                </h1>
+            </div>
+
+            
+          <div class="flex space-x-2 md:space-x-4 items-center">
+    <a href="#" class="nav-link font-medium hover:text-indigo-300 transition">Home</a>
+    <a href="https://streamelements.com/blitzzzfnbr/store" target="_blank" class="nav-link font-medium hover:text-purple-300 transition">Store</a>
+    <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="text-xl text-gray-300 hover:text-indigo-400 transition">
+        <i class="fab fa-discord"></i>
+    </a>
+    <a href="https://twitch.tv/blitzzzfnbr" target="_blank" class="text-xl text-gray-300 hover:text-purple-500 transition">
+        <i class="fab fa-twitch"></i>
+    </a>
+</div>
+
+        </div>
+
+
+
+
+<section class="bg-green-700 text-white text-center px-4 py-6 md:py-4 rounded-lg shadow-md max-w-3xl mx-auto mb-10 animate-bounce">
+    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+        <i class="fab fa-discord text-3xl md:text-4xl"></i>
+        <div>
+            <p class="text-lg md:text-xl font-semibold">🎉 Nyereményjáték a Discordon!</p>
+            <p class="text-sm text-green-100">Csatlakozz most és nyerj exkluzív kaszinó bónuszokat!</p>
+        </div>
+        <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="ml-0 md:ml-4 bg-white text-green-700 font-bold px-4 py-2 rounded-lg shadow hover:bg-green-100 transition">
+            Csatlakozom
+        </a>
+    </div>
+</section>
+
+
+
+
+
+
+    </header>
+<a href="https://discord.gg/rENXq9W3YU" target="_blank" rel="noopener noreferrer"
+   class="absolute left-0 top-1/3 transform -translate-y-1/2 px-6 py-1 text-sm font-bold text-white bg-gradient-to-r from-green-400 to-neon-500 z-10
+          cursor-pointer hover:scale-105 transition-transform duration-300 ease-in-out animate-pulse"
+   style="clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);">
+    🎁 Free Deposit ↗
+</a>
+
+
+
+    <main class="container mx-auto px-4 md:px-8 py-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4">Exkluzív Kaszinó Ajánlatok</h2>
+            <p class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
+                Szerezd meg a legjobb ajánlatokat a legnépszerűbb online kaszinóktól! Regisztrálj még ma, és igényeld az üdvözlő bónuszodat!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Casino Card 1 -->
+            <div class="casino-card group relative h-full flex flex-col pulse">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-6 flex items-center justify-center casino-logo">
+                        <img src="ggbet.png" alt="Royal Spin Casino" class="w-full h-full object-contain">
+                    </div>
+                    
+                    <p class="text-slate-300 mb-4">CRPYTO KASZINÓ</p>
+                    <p class="text-slate-300 mb-4">+100% BÓNUSZ</p>
+                    <p class="text-slate-300 mb-4">24 óra CO</p>
+                    <div class="deal-badge absolute top-4 right-0 px-6 py-1 text-sm font-bold">
+                        HOT DEAL
+                    </div>
+                </div>
+                <div class="mt-auto p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-sm">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ml-2 text-white">3.7</span>
+                            </div>
+                        </div>
+                        <div class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded">
+                            <i class="fas fa-check-circle mr-1"></i> Verified
+                        </div>
+                    </div>
+                    <a href="https://ggbetbestoffer.com/l/683dc069cdfb117abf021a3b" target="_blank" class="btn-primary w-full py-3 rounded-lg font-bold text-center block">
+                        Regisztráció
+                    </a>
+                </div>
+            </div>
+
+            <!-- Casino Card 2 -->
+            <div class="casino-card group relative h-full flex flex-col">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-6 flex items-center justify-center casino-logo">
+                        <!-- kép -->
+                    </div>
+                    <h3 class="text-xl font-bold mb-2"></h3>
+                    <p class="text-slate-300 mb-4"></p>
+                    <div class="deal-badge absolute top-4 right-0 px-6 py-1 text-sm font-bold">
+                        Hamarosan
+                    </div>
+                </div>
+                <div class="mt-auto p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-sm">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span class="ml-2 text-white">4.2</span>
+                            </div>
+                        </div>
+                        <div class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded">
+                            <i class="fas fa-check-circle mr-1"></i> Verified
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary w-full py-3 rounded-lg font-bold text-center block">
+                        Hamarosan
+                    </a>
+                </div>
+            </div>
+
+            <!-- Casino Card 3 -->
+            <div class="casino-card group relative h-full flex flex-col">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-6 flex items-center justify-center casino-logo">
+                        <!-- kép -->
+                    </div>
+                    <h3 class="text-xl font-bold mb-2"></h3>
+                    <p class="text-slate-300 mb-4"></p>
+                    <div class="deal-badge absolute top-4 right-0 px-6 py-1 text-sm font-bold">
+                        Hamarosan
+                    </div>
+                </div>
+                <div class="mt-auto p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-sm">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="ml-2 text-white">5.0</span>
+                            </div>
+                        </div>
+                        <div class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded">
+                            <i class="fas fa-check-circle mr-1"></i> Verified
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary w-full py-3 rounded-lg font-bold text-center block">
+                        Hamarosan
+                    </a>
+                </div>
+            </div>
+
+            <!-- Casino Card 4 -->
+            <div class="casino-card group relative h-full flex flex-col">
+                <div class="p-6 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-6 flex items-center justify-center casino-logo">
+                         <!-- kép -->
+                    </div>
+                    <h3 class="text-xl font-bold mb-2"></h3>
+                    <p class="text-slate-300 mb-4"></p>
+                    <div class="deal-badge absolute top-4 right-0 px-6 py-1 text-sm font-bold bg-red-500">
+                        Hamarosan
+                    </div>
+                </div>
+                <div class="mt-auto p-6 pt-0">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-sm">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ml-2 text-white">4.6</span>
+                            </div>
+                        </div>
+                        <div class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded">
+                            <i class="fas fa-check-circle mr-1"></i> Verified
+                        </div>
+                    </div>
+                    <a href="#" class="btn-primary w-full py-3 rounded-lg font-bold text-center block">
+                        Hamarosan
+                    </a>
+                </div>
+            </div>
+
+            
+        </div>
+<footer class="bg-gray-900 text-slate-400 text-center py-6 mt-16 text-sm">
+    <span>BeGambleAware.org
+Játssz felelősségteljesen, és ismerd a saját határaidat.</span>
+<br>
+    © 2025 <span class="text-white font-semibold">Blitzzzfnbr</span>. Minden jog fenntartva.
+</footer>
+
+    
+    </main>
+
+
+
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const casinoCards = document.querySelectorAll('.casino-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            casinoCards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+            
+            // Floating animation for special elements
+            const floatingElements = document.querySelectorAll('.floating');
+            floatingElements.forEach(el => {
+                el.style.animationDelay = `${Math.random() * 2}s`;
+            });
+        });
+    </script>
+</body>
+</html>
