@@ -10,26 +10,36 @@
         
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
-        body {
+     body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   color: #f8fafc;
-  background: linear-gradient(270deg, #1e3b23, #3a7d44, #2d633d, #144d14);
   background-size: 800% 800%;
-  animation: gradientMove 30s ease infinite;
+  animation: gradientSmooth 25s ease-in-out infinite;
 }
 
-@keyframes gradientMove {
+@keyframes gradientSmooth {
   0% {
-    background-position: 0% 50%;
+    background: linear-gradient(270deg, #1e7f53, #3a7d59, #4b5e5e, #2da066);
   }
-  50% {
-    background-position: 100% 50%;
+  20% {
+    background: linear-gradient(270deg, #2da066, #3a7d59, #4b5e5e, #1e7f53);
+  }
+  40% {
+    background: linear-gradient(270deg, #4b5e5e, #1e7f53, #2da066, #3a7d59);
+  }
+  60% {
+    background: linear-gradient(270deg, #3a7d59, #4b5e5e, #1e7f53, #2da066);
+  }
+  80% {
+    background: linear-gradient(270deg, #1e7f53, #2da066, #3a7d59, #4b5e5e);
   }
   100% {
-    background-position: 0% 50%;
+    background: linear-gradient(270deg, #1e7f53, #3a7d59, #4b5e5e, #2da066);
   }
 }
+
+
 
         
         .casino-card {
