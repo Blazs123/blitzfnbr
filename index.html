@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blitz Kaszinó ajánlatokat</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-     body {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blitz Kaszinó ajánlatokat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+   body {
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
   color: #f8fafc;
@@ -39,192 +38,184 @@
   }
 }
 
+    .casino-card {
+      transition: all 0.3s ease;
+      transform-style: preserve-3d;
+      perspective: 1000px;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      opacity: 1 !important;
+      filter: none !important;
+    }
 
+    .casino-card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4);
+    }
 
-        
-        .casino-card {
-            transition: all 0.3s ease;
-            transform-style: preserve-3d;
-            perspective: 1000px;
-            box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
-            background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-    opacity: 1 !important;
-    filter: none !important;
-            
-        }
-        
-        .casino-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4);
-        }
-        
-        .casino-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #7bf163, #51f142, #1fe42f);
-        }
-        
-        .casino-logo {
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
-            transition: all 0.3s ease;
-        }
-        
-        .casino-card:hover .casino-logo {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
-        }
-        
-        .deal-badge {
-            background: linear-gradient(45deg, #12df8a, #07b80f);
-            clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
-        }
-        
-        .btn-primary {
-            background: linear-gradient(45deg, #37d432, #21df96);
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(45, 235, 7, 0.4);
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(36, 240, 36, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(24, 156, 7, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(60, 238, 60, 0);
-            }
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
+    .casino-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #7bf163, #51f142, #1fe42f);
+    }
 
-        .nav-link {
-            position: relative;
-            padding: 8px 12px;
-        }
+    .casino-logo {
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+      transition: all 0.3s ease;
+    }
 
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #0fb332, #4ce426);
-            transition: width 0.3s ease;
-        }
+    .casino-card:hover .casino-logo {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3));
+    }
 
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        .text-gray-stroke {
-  -webkit-text-stroke: 1px #1e293b;
-}
-.full-gradient-bar {
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(270deg, #00ff88, #0f1c20, #00ff88);
-  background-size: 400% 400%;
-  animation: moveGradient 8s ease infinite;
-  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
-}
+    .deal-badge {
+      background: linear-gradient(45deg, #12df8a, #07b80f);
+      clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+    }
 
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+    .btn-primary {
+      background: linear-gradient(45deg, #37d432, #21df96);
+      transition: all 0.3s ease;
+    }
 
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(45, 235, 7, 0.4);
+    }
 
-    </style>
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(36, 240, 36, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(24, 156, 7, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(60, 238, 60, 0);
+      }
+    }
+
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 8px 12px;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #0fb332, #4ce426);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .text-gray-stroke {
+      -webkit-text-stroke: 1px #1e293b;
+    }
+
+    .full-gradient-bar {
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(270deg, #00ff88, #0f1c20, #00ff88);
+      background-size: 200% 200%;
+      animation: 8s ease infinite;
+      box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    }
+
+    @keyframes moveGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .bottom-15 { bottom: 60px; }
+    .right-15 { right: 60px; }
+
+    /* New header style to match casino-card */
+    header {
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3);
+      margin: 20px;
+    }
+  </style>
 </head>
 <body class="min-h-screen">
-    <header class="py-8 px-4 md:px-8">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-       <div class="flex items-center mb-6 md:mb-0">
- <div class="w-15 h-15 rounded-full overflow-hidden mr-4 border-2 border-grey">
-    <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/d031cc84-0607-425e-bc3f-1e7da5b9f082-profile_image-70x70.png" alt="Logo" class="w-full h-full object-cover">
-</div>
+  <header class="py-6 px-4 md:px-10 bg-[#0f172a] shadow-lg rounded-b-3xl">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/d031cc84-0607-425e-bc3f-1e7da5b9f082-profile_image-70x70.png" class="w-14 h-14 rounded-full border-2 border-green-500">
+        <h1 class="text-3xl font-bold text-white">Blitz</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#" class="text-white hover:text-green-400">Home</a>
+        <a href="https://streamelements.com/blitzzzfnbr/store" target="_blank" class="text-white hover:text-green-400">Store</a>
+        <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="text-xl text-[#5865F2] hover:text-white">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://twitch.tv/blitzzzfnbr" target="_blank" class="text-xl text-[#9146FF] hover:text-white">
+          <i class="fab fa-twitch"></i>
+        </a>
+      </nav>
+    </div>
+  </header>
 
-  <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent text-gray-stroke">
-  Blitz
-</h1>
-
-</div>
-
-
-
-            
-          <div class="flex space-x-2 md:space-x-4 items-center">
-    <a href="#" class="nav-link font-medium hover:text-indigo-300 transition">Home</a>
-    <a href="https://streamelements.com/blitzzzfnbr/store" target="_blank" class="nav-link font-medium hover:text-purple-300 transition">Store</a>
-    <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="text-xl text-[#5865F2] hover:text-indigo-400 transition">
-        <i class="fab fa-discord"></i>
-    </a>
-    <a href="https://twitch.tv/blitzzzfnbr" target="_blank" class="text-xl text-[#9146FF] hover:text-purple-500 transition ">
-        <i class="fab fa-twitch"></i>
-    </a>
-</div>
-
-        </div>
-
-
-
-<section class="bg-green-700 text-white text-center px-4 py-6 md:py-4 mt-4 md:mt-0 rounded-lg shadow-md max-w-3xl mx-auto mb-10 md:animate-bounce">
-    <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
-        <i class="fab fa-discord text-3xl md:text-4xl "></i>
+  <!-- IDE JÖN A TÖBBI RÉSZ - változatlanul hagyva -->
+  <!-- ... -->
+  <!-- Footer és script szintén változatlan marad -->
+   <br>
+    <section class="bg-green-700 text-white text-center px-4 py-6 md:py-4 mt-4 md:mt-0 rounded-lg shadow-md max-w-3xl mx-auto mb-10 md:animate-bounce">
+      <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+        <i class="fab fa-discord text-3xl md:text-4xl"></i>
         <div>
-            <p class="text-lg md:text-xl font-semibold">🎉 Nyereményjáték a Discordon!</p>
-            <p class="text-sm text-green-100">Csatlakozz most és nyerj exkluzív kaszinó bónuszokat!</p>
+          <p class="text-lg md:text-xl font-semibold">🎉 Nyereményjáték a Discordon!</p>
+          <p class="text-sm text-green-100">Csatlakozz most és nyerj exkluzív kaszinó bónuszokat!</p>
         </div>
         <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="ml-0 md:ml-4 bg-white text-green-700 font-bold px-4 py-2 rounded-lg shadow hover:bg-green-100 transition">
-            Csatlakozom
+          Csatlakozom
         </a>
-    </div>
-</section>
+      </div>
+    </section>
 
 
-
-
-
-
-
-
-    </header>
 <div class="md:hidden fixed bottom-4 right-4 z-50">
-    <button id="toggleDeposit" class="bg-green-500 text-white font-bold px-4 py-2 rounded-full shadow-lg">
-        🎁 Free Deposit
-    </button>
+    <div class="md:hidden fixed bottom-4 right-4 z-50 flex flex-col items-end">
+    
+
+  
+</div>
+
+
+   
+
     <div id="depositMenu" class="hidden mt-2 bg-white text-green-700 text-sm rounded-lg shadow-lg p-4 w-64">
         <p class="mb-2 font-semibold">Csatlakozz a Discord szerverhez és szerezd meg az ingyenes befizetést!</p>
         <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="block bg-green-600 text-white text-center py-2 rounded hover:bg-green-700 transition">
@@ -233,6 +224,12 @@
     </div>
 </div>
 
+
+ 
+
+
+
+
 <!-- Desktop version -->
 <a href="https://discord.gg/rENXq9W3YU" target="_blank" rel="noopener noreferrer"
    class="hidden md:block absolute left-0 top-1/3 transform -translate-y-1/2 px-6 py-1 text-sm font-bold text-white bg-gradient-to-r from-green-400 to-green-500 z-10
@@ -240,6 +237,7 @@
    style="clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);">
     🎁 Free Deposit ↗
 </a>
+
 
 
 
