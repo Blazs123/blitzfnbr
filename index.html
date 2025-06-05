@@ -169,33 +169,24 @@
   </style>
 </head>
 <body class="min-h-screen">
- <header class="py-6 px-4 md:px-10 bg-[#0f172a] shadow-lg rounded-b-3xl">
-  <div class="container mx-auto flex justify-between items-center">
-    <div class="flex items-center gap-4">
-      <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/d031cc84-0607-425e-bc3f-1e7da5b9f082-profile_image-70x70.png" class="w-14 h-14 rounded-full border-2 border-green-500">
-      <h1 class="text-3xl font-bold text-white">Blitz</h1>
+  <header class="py-6 px-4 md:px-10 bg-[#0f172a] shadow-lg rounded-b-3xl">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/d031cc84-0607-425e-bc3f-1e7da5b9f082-profile_image-70x70.png" class="w-14 h-14 rounded-full border-2 border-green-500">
+        <h1 class="text-3xl font-bold text-white">Blitz</h1>
+      </div>
+      <nav class="flex space-x-6">
+        <a href="#" class="text-white hover:text-green-400">Home</a>
+        <a href="https://streamelements.com/blitzzzfnbr/store" target="_blank" class="text-white hover:text-green-400">Store</a>
+        <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="text-xl text-[#5865F2] hover:text-white">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://twitch.tv/blitzzzfnbr" target="_blank" class="text-xl text-[#9146FF] hover:text-white">
+          <i class="fab fa-twitch"></i>
+        </a>
+      </nav>
     </div>
-
-    <!-- Hamburger ikon mobilra -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-white text-3xl">
-        ☰
-      </button>
-    </div>
-
-    <!-- Menü -->
-    <nav id="mobile-menu" class="hidden absolute top-24 left-0 w-full bg-[#0f172a] flex-col items-center gap-4 p-4 md:flex md:static md:flex-row md:space-x-6 md:w-auto">
-      <a href="#" class="text-white hover:text-green-400">Home</a>
-      <a href="https://streamelements.com/blitzzzfnbr/store" target="_blank" class="text-white hover:text-green-400">Store</a>
-      <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="text-xl text-[#5865F2] hover:text-white">
-        <i class="fab fa-discord"></i>
-      </a>
-      <a href="https://twitch.tv/blitzzzfnbr" target="_blank" class="text-xl text-[#9146FF] hover:text-white">
-        <i class="fab fa-twitch"></i>
-      </a>
-    </nav>
-  </div>
-</header>
+  </header>
 
   <!-- IDE JÖN A TÖBBI RÉSZ - változatlanul hagyva -->
   <!-- ... -->
@@ -345,12 +336,6 @@ Játssz felelősségteljesen, és ismerd a saját határaidat.</span>
         const menu = document.getElementById("depositMenu");
         menu.classList.toggle("hidden");
     });
-
-      // Egyszerű JS a hamburger menü nyitásához
-  document.getElementById('menu-toggle').addEventListener('click', () => {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
     </script>
 </body>
 </html>
