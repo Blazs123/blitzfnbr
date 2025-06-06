@@ -18,7 +18,19 @@
       background-size: 800% 800%;
       animation: gradientSmooth 25s ease-in-out infinite;
     }
-
+.info {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid #00ff00;
+      color: #00ff00;
+      background-color: transparent;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
     .casino-card {
       transition: all 0.3s ease;
       transform-style: preserve-3d;
@@ -183,9 +195,9 @@
             <img src="ggbet.png" alt="Royal Spin Casino" class="w-full h-full object-contain">
           </div>
 
-          <p class="text-slate-300 mb-4  ">CRPYTO KASZINÓ</p>
-          <p class="text-slate-300 mb-4">+100% BÓNUSZ</p>
-          <p class="text-slate-300 mb-4">1 óra CO</p>
+          <p class="text-slate-300 mb-4 info ">CRPYTO KASZINÓ</p>
+          <p class="text-slate-300 mb-4 info">+100% BÓNUSZ</p>
+          <p class="text-slate-300 mb-4 info">1 óra CO</p>
           <div class="deal-badge absolute top-4 right-0 px-6 py-1 text-sm font-bold">
             HOT DEAL
           </div>
