@@ -53,10 +53,7 @@
       filter: none !important;
     }
 
-    .casino-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.4);
-    }
+   
 
     .casino-card::before {
       content: '';
@@ -205,25 +202,39 @@
       <a href="https://twitch.tv/blitzzzfnbr" target="_blank" class="text-xl text-[#9146FF] hover:text-white">
         <i class="fab fa-twitch"></i>
       </a>
+      <a href="@blitzfnbr" target="_blank" class="text-xl text-[#00aaff] hover:text-white">
+        <i class="fab fa-telegram"></i>
+      </a>
+      <a href="mailto:ferencjozsef277@gmail.com" target="_blank" class="text-xl text-[#ffffff hover:text-white">
+        <i class="fab fa-google"></i>
+      </a>
     </nav>
   </div>
 </header>
 <br>
 <br>
 <!-- DISCORD PROMÓ -->
-<section class="text-center px-4 py-6 md:py-4 mt-4 md:mt-0 rounded-lg shadow-md max-w-3xl mx-auto mb-10 md:animate-bounce" style="background-color: #00ff88;">
+<section class="relative text-center px-4 py-6 md:py-4 mt-4 md:mt-0 rounded-lg shadow-md max-w-3xl mx-auto mb-10" style="background-color: #00ff88;">
+
+  <!-- Modern badge: ráragasztva felül középre -->
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 translate-y-[-50%] bg-[#00ff88] text-black text-sm md:text-base px-5 py-1.5 rounded-full shadow-md animate-pulse font-medium tracking-wide">
+    🚀 Over 600 Members
+  </div>
+
   <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
     <i class="fab fa-discord text-3xl md:text-4xl" style="color: #5865F2;"></i>
     <div>
       <p class="text-lg md:text-xl font-semibold" style="color: #0f172a;">🎉 Nyereményjáték a Discordon!</p>
       <p class="text-sm" style="color: #000000;">Csatlakozz most és nyerj exkluzív kaszinó bónuszokat!</p>
     </div>
-   <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="ml-0 md:ml-4 bg-[#5865F2] text-white font-bold px-4 py-2 rounded-lg shadow hover:bg-[#4752c4] transition">
-  Csatlakozom
-</a>
-
+    <a href="https://discord.gg/rENXq9W3YU" target="_blank" class="ml-0 md:ml-4 bg-[#5865F2] text-white font-bold px-4 py-2 rounded-lg shadow hover:bg-[#4752c4] transition">
+      Csatlakozom
+    </a>
   </div>
 </section>
+
+
+
 
 
 <!-- MOBIL DEPOSIT GOMB ÉS LENYÍLÓ -->
@@ -336,5 +347,7 @@
     }
   });
 </script>
+
+
 </body>
 </html>
